@@ -1,21 +1,20 @@
-# bitcoin-inscription-parser
+# Bitcoin-Inscription-Parser
 
-bitcoin-inscription-parser is a tool which helps to parse bitcoin inscriptions 
-from transactions. Any inscription content wrapped in `OP_FALSE OP_IF … OP_ENDIF`
-using data pushes can be correctly parsed.
+Bitcoin-Inscription-Parser is a tool which helps to parse bitcoin ordinal inscriptions from transactions. Any inscription content wrapped in `OP_FALSE OP_IF … OP_ENDIF` using data pushes can be correctly parsed.
 
 The tool supports single or multiple inscriptions in all input of the transaction.
 
+
 # Installation
 ```
-go get github.com/balletcrypto/bitcoin-inscription-parser
+go get https://github.com/catlovedev/Bitcoin-Inscription-Parser
 ```
 # Example
 ```go
 package main
 
 import (
-	"github.com/balletcrypto/bitcoin-inscription-parser/parser"
+	"github.com/catlovedev/bitcoin-inscription-parser/parser"
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
 	"github.com/btcsuite/btcd/rpcclient"
 	log "github.com/sirupsen/logrus"
@@ -59,8 +58,6 @@ func main() {
 }
 ```
 Also shown in examples folder
-
-# Unit tests
 ```
 go test -v script_parser_test.go 
 === RUN   TestScriptWithInscription
